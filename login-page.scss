@@ -1,11 +1,6 @@
 $primary-color: #12AA3E;
 
 body{
-	 background: url(http://www.timurtek.com/wp-content/uploads/2014/10/form-bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   font-family:'HelveticaNeue','Arial', sans-serif;
 
 }
@@ -18,6 +13,12 @@ div.logo{text-align: center;}
 .logo {
   margin-top: 20px;
   margin-bottom: 30px;
+  img {
+    max-width: 320px;
+    max-height: 100px;
+    display: block;
+    margin: auto;
+  }
 }
 .logo-active{fill: #44aacc !important;}
 #formWrapper{
@@ -32,8 +33,7 @@ div.logo{text-align: center;}
 
 form#form{
 	position: absolute;
-	width:360px;
-	height:320px;
+	width:320px;
 	height:auto;
 	background-color: #fff;
 	margin:auto;
@@ -42,7 +42,7 @@ form#form{
 	left:50%;
 	top:50%;
 	margin-left:-180px;
-	margin-top:-200px;
+	margin-top:-266px;
 }
 div.form-item{position: relative; display: block; margin-bottom: 20px;}
 input, a {transition: all .2s ease;}
@@ -93,9 +93,11 @@ a.login:focus{outline: none;}
   ul {
     list-style: none;
     padding-left: 0px;
+    display: flex;
+    width: 100%;
     li {
-      width: 32%;
-      float: left;
+      min-width: 32%;
+      flex-grow: 1;
       margin-right: 2%;
       .login {
         font-size: 12px;

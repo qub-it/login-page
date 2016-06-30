@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{#login.title}}
+    <title>{{login.title}}</title>
+    {{/login.title}}
+    <meta name="viewport" content="width=device-width">
+    {{#login.favicon}}
+    <link rel="icon" href="{{login.favicon}}">
+    {{/login.favicon}}
+    <link rel="stylesheet" href="login-page.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js" ></script>
+    <script type="text/javascript" src="login-page.js" ></script>
+    {{#login.background}}
+    <style type="text/css">
+      body {
+        background: url({{login.background}}) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    </style>
+    {{/login.background}}
+  </head>
+
+<body>
+  <div id="formWrapper">
+    <form id="form">
+      <div class="logo">
+        {{#login.organization.logo}}
+          <img src="{{login.organization.logo}}" alt="{{login.organization.name}}">
+        {{/login.organization.logo}}
+      </div>
+      <div class="form-item">
+        <p class="formLabel">Username</p>
+        <input type="email" name="email" id="email" class="form-style" autocomplete="off"/>
+      </div>
+      <div class="form-item">
+        <p class="formLabel">Password</p>
+        <input type="password" name="password" id="password" class="form-style" />
+        {{#login.passswordRecoveryUrl}}
+          <p class="rup-pass"><a href="{{login.passswordRecoveryUrl}}" ><small>Forgot Password ?</small></a></p>
+        {{/login.passswordRecoveryUrl}}
+        <!-- <div class="pw-view"><i class="fa fa-eye"></i></div> -->
+      </div>
+      <div class="form-item">
+        <input type="submit" class="login pull-right" value="Log In">    
+      </div>      
+      <!--<p class="pull-left"><a href="#"><small>Register</small></a></p> -->
+      <div id="other-login">
+        <ul>
+          {{#login.facebookUrl}}
+            <li><a href="{{login.facebookUrl}}" class="login facebook pull-right">Log in Facebook</a></li>
+          {{/login.facebookUrl}}
+          {{#login.googleplusUrl}}
+            <li><a href="{{login.googleplusUrl}}" class="login google pull-right">Log in Google+</a></li>
+          {{/login.googleplusUrl}}
+          {{#login.citizencardUrl}}
+            <li><input type="submit" class="login cc pull-right" value="Login in CC"> </li>
+          {{/login.citizencardUrl}}
+        </ul>  
+      </div>  
+      <div class="clear-fix"></div>
+      <div class="footer">
+        {{#login.helpUrl}}
+        <p class="help"><a href="{{login.helpUrl}}" ><small><i class="fa fa-life-ring"></i> help</small></a></p>
+        {{/login.helpUrl}} 
+        <p class="language"><a href="#" ><small><i class="fa fa-globe"></i> language(English)</small></a></p>		 
+      </div>  
+    </form>
+  </div>
+</body>
+</html>

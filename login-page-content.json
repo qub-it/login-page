@@ -1,0 +1,17 @@
+{
+	"login": {
+		"title": "Pagina de login",
+		"favicon": "//www.isa.ulisboa.pt/sites/all/themes/isa/favicon.ico",
+		"background": "//www.timurtek.com/wp-content/uploads/2014/10/form-bg.jpg",
+		"organization": {
+			"name": "Instituto Superior de Agronomia",
+			"logo": "//www.isa.ulisboa.pt/files/logo_green.png"
+		},
+		"passswordRecoveryUrl": "#",
+		"authenticationUrl": "#",
+		"facebookUrl": "#",
+		"googleplusUrl": "#",
+		"citizencardUrl": "#",
+		"helpUrl": "#"
+	}
+}
