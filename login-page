@@ -1,0 +1,49 @@
+<script src="http://code.jquery.com/jquery-2.1.0.min.js" ></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<body>
+<div id="formWrapper">
+
+<form id="form">
+<div class="logo">
+<img src="{{organization.image}}">
+</div>
+		<div class="form-item">
+			<p class="formLabel">Email</p>
+			<input type="email" name="email" id="email" class="form-style" autocomplete="off"/>
+		</div>
+		<div class="form-item">
+			<p class="formLabel">Password</p>
+			<input type="password" name="password" id="password" class="form-style" />
+			<p class="rup-pass"><a href="#" ><small>Forgot Password ?</small></a></p>	        
+			<!-- <div class="pw-view"><i class="fa fa-eye"></i></div> -->
+		</div>
+		<div class="form-item">
+<input type="submit" class="login pull-right" value="Log In">    
+		</div>      
+		<!--<p class="pull-left"><a href="#"><small>Register</small></a></p> -->
+<div id="other-login">
+  <ul>
+  	{{#login.has_facebook}}
+    	<li><a href="{{login.facebook_url}}" class="login facebook pull-right">Log in Facebook</a></li>
+    {{/login.has_facebook}}	
+    {{#login.has_googleplus}}
+    	<li><a href="{{login.googleplus_url}}" class="login google pull-right">Log in Google+</a></li>
+    {{/login.has_googleplus}}
+    {{#login.has_cc}}
+    <li><input type="submit" class="login cc pull-right" value="Login in CC"> </li>
+    {{/login.has_cc}}
+  </ul>  
+</div>  
+		<div class="clear-fix"></div>
+  <div class="footer">
+  				{{#link-help.has_help}}
+    				<p class="help"><a href="{{link-help.help_url}}" ><small><i class="fa fa-life-ring"></i> help</small></a></p>
+    			{{/link-help.has_help}}
+    			{{#link-language.has_language}}		 
+    			<p class="language"><a href="{{link-language.language_url}}" ><small><i class="fa fa-globe"></i> language(English)</small></a></p>
+    			{{/link-language.has_language}}		 
+  </div>  
+</form>
+</div>
+</body>
+</html>
