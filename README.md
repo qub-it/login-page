@@ -1,7 +1,5 @@
 # login-page
 
----
-
 ##Layout contract##
 1. Title
 2. Favicon
@@ -16,8 +14,8 @@
 11. Help link
 
 ##ToDo##
-1. Buildfile: gulp, grunt, npm
-2. Dependencies: i18n, moustache, json
+1. Buildfile: npm
+2. Dependencies: i18n, mustache
 3. Improve UX on older mobile devices
 4. Random background picker.
 5. Connector for FenixEdu.

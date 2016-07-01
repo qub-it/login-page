@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     {{#login.title}}
     <title>{{login.title}}</title>
     {{/login.title}}
@@ -16,7 +17,7 @@
     {{#login.background}}
     <style type="text/css">
       body {
-        background: url({{login.background}}) no-repeat center center fixed;
+        background: url({{&login.background}}) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

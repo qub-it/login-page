@@ -1,0 +1,37 @@
+{
+  "name": "login-page",
+  "version": "1.0.0",
+  "description": "qubIT's customizable login page for FenixEdu.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "build": "npm run build:setup && npm run build:sass && npm run build:mustache",
+    "build:setup": "rm -rf output/ && mkdir output && cp src/login-page.js output/login-page.js",
+    "build:sass": "sass src/login-page.scss output/login-page.css && rm output/*map",
+    "build:mustache": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qub-it/login-page.git"
+  },
+  "keywords": [
+    "qubIT",
+    "mustache",
+    "sass",
+    "fenixedu",
+    "login"
+  ],
+  "author": "Diogo Simoes <diogo.simoes@qub-it.com>",
+  "contributors": [
+    "Tiago Pratas <tiago.pratas@qub-it.com"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qub-it/login-page/issues"
+  },
+  "homepage": "https://github.com/qub-it/login-page#readme",
+  "private": true,
+  "dependencies": {
+    "mustache": "^2.2.1"
+  }
+}
