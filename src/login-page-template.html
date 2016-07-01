@@ -35,9 +35,9 @@
       <div class="form-item">
         <p class="formLabel">Password</p>
         <input type="password" name="password" id="password" class="form-style" />
-        {{#login.passswordRecoveryUrl}}
-          <p class="rup-pass"><a href="{{login.passswordRecoveryUrl}}" ><small>Forgot Password ?</small></a></p>
-        {{/login.passswordRecoveryUrl}}
+        {{#login.passwordRecoveryUrl}}
+          <p class="rup-pass"><a href="{{login.passwordRecoveryUrl}}" ><small>Forgot Password ?</small></a></p>
+        {{/login.passwordRecoveryUrl}}
         <!-- <div class="pw-view"><i class="fa fa-eye"></i></div> -->
       </div>
       <div class="form-item">
@@ -53,7 +53,7 @@
             <li><a href="{{login.googleplusUrl}}" class="login google pull-right">Log in Google+</a></li>
           {{/login.googleplusUrl}}
           {{#login.citizencardUrl}}
-            <li><input type="submit" class="login cc pull-right" value="Login in CC"> </li>
+            <li><input type="submit" class="login cc pull-right" value="Login CC"> </li>
           {{/login.citizencardUrl}}
         </ul>  
       </div>  

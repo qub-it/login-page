@@ -11,7 +11,7 @@
 			"name": "Instituto Superior de Agronomia",
 			"logo": "//www.isa.ulisboa.pt/files/logo_green.png"
 		},
-		"passswordRecoveryUrl": "#",
+		"passwordRecoveryUrl": "#",
 		"authenticationUrl": "#",
 		"facebookUrl": "#",
 		"googleplusUrl": "#",
