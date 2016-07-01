@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	$('body').css('background-image','url(' + getRandomBgUrl() + ')')
+
 	var formInputs = $('input[type="email"],input[type="password"]');
 	formInputs.focus(function() {
        $(this).parent().children('p.formLabel').addClass('formTop');
@@ -16,3 +18,8 @@ $(document).ready(function(){
 		 $(this).parent().children('.form-style').focus();
 	});
 });
+
+function getRandomBgUrl() {
+	var hiddenData = $(".hidden-data > span");
+    return hiddenData[Math.floor(Math.random() * hiddenData.length)].innerHTML;
+}

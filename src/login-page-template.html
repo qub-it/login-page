@@ -12,19 +12,12 @@
     <link rel="stylesheet" href="login-page.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+    {{#login.background}}
+    <link rel="prefetch" href="{{&url}}">
+    {{/login.background}}
+
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js" ></script>
     <script type="text/javascript" src="login-page.js" ></script>
-    {{#login.background}}
-    <style type="text/css">
-      body {
-        background: url({{&login.background}}) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
-    </style>
-    {{/login.background}}
   </head>
 
 <body>
@@ -72,6 +65,11 @@
         <p class="language"><a href="#" ><small><i class="fa fa-globe"></i> language(English)</small></a></p>		 
       </div>  
     </form>
+  </div>
+  <div class="hidden-data">
+    {{#login.background}}
+    <span>{{&url}}</span>
+    {{/login.background}}
   </div>
 </body>
 </html>
