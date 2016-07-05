@@ -5,10 +5,11 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "build": "npm run build:setup && npm run build:sass && npm run build:mustache",
-    "build:setup": "rm -rf output/ && mkdir output && cp src/login-page.js output/login-page.js",
-    "build:sass": "sass src/login-page.scss output/login-page.css && rm output/*map",
-    "build:mustache": "node app.js"
+    "build": "npm run build:setup && npm run build:mustache && npm run build:sass && npm run build:cleanup",
+    "build:setup": "rm -rf build/ && mkdir build && rm -rf output/ && mkdir output && cp src/login-page.js output/login-page.js",
+    "build:sass": "sass build/login-page.scss output/login-page.css && rm output/*map",
+    "build:mustache": "node app.js",
+    "build:cleanup": "rm -rf build"
   },
   "repository": {
     "type": "git",

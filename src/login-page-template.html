@@ -9,7 +9,7 @@
     {{#login.favicon}}
     <link rel="icon" href="{{login.favicon}}">
     {{/login.favicon}}
-    <link rel="stylesheet" href="login-page.css">
+    <link rel="stylesheet" href="{{login.contextPath}}login-page.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     {{#login.background}}
@@ -17,46 +17,55 @@
     {{/login.background}}
 
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js" ></script>
-    <script type="text/javascript" src="login-page.js" ></script>
+    <script type="text/javascript" src="{{login.contextPath}}login-page.js" ></script>
   </head>
 
 <body>
   <div id="formWrapper">
     <form id="form">
+      <input type="hidden" id="authenticator" value="{{login.authenticationUrl}}">
+      <input type="hidden" id="callback" name="callback" value="{{login.entrypointUrl}}">
       <div class="logo">
         {{#login.organization.logo}}
           <img src="{{login.organization.logo}}" alt="{{login.organization.name}}">
         {{/login.organization.logo}}
       </div>
-      <div class="form-item">
-        <p class="formLabel">Username</p>
-        <input type="email" name="email" id="email" class="form-style" autocomplete="off"/>
+      <div class="alert-login">
+        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+        <p>A autenticar...</p>
       </div>
-      <div class="form-item">
-        <p class="formLabel">Password</p>
-        <input type="password" name="password" id="password" class="form-style" />
-        {{#login.passwordRecoveryUrl}}
-          <p class="rup-pass"><a href="{{login.passwordRecoveryUrl}}" ><small>Forgot Password ?</small></a></p>
-        {{/login.passwordRecoveryUrl}}
-        <!-- <div class="pw-view"><i class="fa fa-eye"></i></div> -->
+      <div id="form-container">
+        <div class="form-item">
+          <p class="formLabel">Username</p>
+          <input type="text" name="username" id="username" class="form-style" autocapitalize="off" autocomplete="off" autofocus/>
+        </div>
+        <div class="form-item">
+          <p class="formLabel">Password</p>
+          <input type="password" name="password" id="password" class="form-style" />
+          {{#login.passwordRecoveryUrl}}
+            <p class="rup-pass"><a href="{{login.passwordRecoveryUrl}}" ><small>Forgot Password ?</small></a></p>
+          {{/login.passwordRecoveryUrl}}
+          <!-- <div class="pw-view"><i class="fa fa-eye"></i></div> -->
+        </div>
+        <div class="alert">Verifique se introduziu correctamente os seus dados.</div>
+        <div class="form-item">
+          <input type="submit" id="auth-button" class="login pull-right" value="Log In">    
+        </div>      
+        <!--<p class="pull-left"><a href="#"><small>Register</small></a></p> -->
+        <div id="other-login">
+          <ul>
+            {{#login.facebookUrl}}
+              <li><a href="{{login.facebookUrl}}" class="login facebook pull-right">Log in Facebook</a></li>
+            {{/login.facebookUrl}}
+            {{#login.googleplusUrl}}
+              <li><a href="{{login.googleplusUrl}}" class="login google pull-right">Log in Google+</a></li>
+            {{/login.googleplusUrl}}
+            {{#login.citizencardUrl}}
+              <li><input type="submit" id="auth-cc-button" class="login cc pull-right" value="Login CC"> </li>
+            {{/login.citizencardUrl}}
+          </ul>  
+        </div>
       </div>
-      <div class="form-item">
-        <input type="submit" class="login pull-right" value="Log In">    
-      </div>      
-      <!--<p class="pull-left"><a href="#"><small>Register</small></a></p> -->
-      <div id="other-login">
-        <ul>
-          {{#login.facebookUrl}}
-            <li><a href="{{login.facebookUrl}}" class="login facebook pull-right">Log in Facebook</a></li>
-          {{/login.facebookUrl}}
-          {{#login.googleplusUrl}}
-            <li><a href="{{login.googleplusUrl}}" class="login google pull-right">Log in Google+</a></li>
-          {{/login.googleplusUrl}}
-          {{#login.citizencardUrl}}
-            <li><input type="submit" class="login cc pull-right" value="Login CC"> </li>
-          {{/login.citizencardUrl}}
-        </ul>  
-      </div>  
       <div class="clear-fix"></div>
       <div class="footer">
         {{#login.helpUrl}}

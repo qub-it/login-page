@@ -1,4 +1,4 @@
-$primary-color: #12AA3E;
+$primary-color: {{theme.primaryColor}};
 
 body{
   background-position-x: center;
@@ -96,6 +96,23 @@ a.login:hover{background-color: rgba($primary-color, 0.85);  color:#fff; cursor:
 input[type="submit"].login:focus,
 a.login:focus{outline: none;}
 
+.alert-login {
+  color: #ababab;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+.alert {
+  color: #e31c1c;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  display: none;
+  text-align: center;
+  font-size: 13px;
+}
 
 #other-login {
   ul {
@@ -199,7 +216,7 @@ div.hidden-data {
     height: 40px;
     position: fixed;
     right: 302px;
-    color: #f4f4f4f4;
+    color: #f4f4f4;
     font-size: 30px;
     text-align: center;
   }
