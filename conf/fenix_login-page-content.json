@@ -11,13 +11,13 @@
 			"name": "Quorum Born IT",
 			"logo": "//www.qub-it.com/img/logo@2x.png"
 		},
-		"passwordRecoveryUrl": "#",
+		"passwordRecoveryUrl": "",
 		"authenticationUrl": "/fenix/api/bennu-core/profile/extension/loginExtension",
 		"facebookUrl": "",
 		"googleplusUrl": "",
-		"citizencardUrl": "https://www.facebook.com/SonarFestivalOfficialPage/",
-		"helpUrl": "#",
-		"contextPath": "",
+		"citizencardUrl": "",
+		"helpUrl": "",
+		"contextPath": "static/qubLoginPage/",
 		"entrypointUrl": ""
 	},
 	"theme": {
