@@ -22,7 +22,13 @@ $(document).ready(function(){
 		}, 300);
 	});
 	$('p.formLabel').click(function(){
-		 $(this).parent().children('.form-style').focus();
+		$(this).parent().children('.form-style').focus();
+	});
+
+	$('.mark > .btn').on('click', function () {
+		$(this).find('i').toggleClass('fa-angle-right');
+		$(this).find('i').toggleClass('fa-angle-left');
+		$('.mark').toggleClass('mark-show');
 	});
 
 	$('#auth-button').on('click', function (event) {

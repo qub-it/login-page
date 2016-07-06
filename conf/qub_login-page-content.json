@@ -1,0 +1,26 @@
+{
+	"login": {
+		"title": "Página de login",
+		"favicon": "//www.qub-it.com/img/ico/favicon.ico",
+		"background": [
+			{ "url": "//www.timurtek.com/wp-content/uploads/2014/10/form-bg.jpg" },
+			{ "url": "//feelgrafix.com/data/grand-canyon/grand-canyon-13.jpg" },
+			{ "url": "//jacekproniewicz.files.wordpress.com/2013/02/20130215-213220.jpg" }
+		],
+		"organization": {
+			"name": "Quorum Born IT",
+			"logo": "//www.qub-it.com/img/logo@2x.png"
+		},
+		"passwordRecoveryUrl": "#",
+		"authenticationUrl": "#",
+		"facebookUrl": "#",
+		"googleplusUrl": "#",
+		"citizencardUrl": "",
+		"helpUrl": "#",
+		"contextPath": "",
+		"entrypointUrl": ""
+	},
+	"theme": {
+		"primaryColor": "#7729AB"
+	}
+}

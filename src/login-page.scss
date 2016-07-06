@@ -219,27 +219,34 @@ div.hidden-data {
 }
 
 .mark {
-  margin: -8px;
+  margin-top: -8px;
   position: fixed;
   z-index: 2000;
   right: 0;
   background-color: #FFFFFF;
   height: 100%;
+  width: 0;
+  transition: width 800ms ease;
+  overflow-y: auto;
+  overflow-x: hidden;
   .btn {
+    position: fixed;
     background-color: #FFFFFF;
     width: 40px;
     height: 40px;
-    position: fixed;
-    right: 302px;
+    margin-left: -40px;
     color: #f4f4f4;
     font-size: 30px;
     text-align: center;
+
+    &:hover {
+      color:#34495E;
+    }
   }
   .container-mark {
-    margin: 15px 22px 15px 15px;
+    margin: 15px;
     width: 280px;
     margin-top: 40px;
-    min-height: 100%;
     h1 {
       font-size: 20px;
       color: #000000;
@@ -252,8 +259,7 @@ div.hidden-data {
       letter-spacing: 0px;
       line-height: 23px;
     }
-  }
-
+  }  
   .structure {
     .omnis-platform {
       .omnis-logo {
@@ -278,4 +284,8 @@ div.hidden-data {
     text-align: center;
     bottom: 5px;
   }
+}
+
+.mark-show {
+  width: 317px;
 }
