@@ -1,4 +1,5 @@
 $primary-color: {{theme.primaryColor}};
+@import url(//www.portaldocidadao.pt/PortalAmaHome-theme/fonts/PortalCidadao.ttf);
 
 body{
   background-position-x: center;
@@ -90,6 +91,7 @@ a.login{
 	border:none;
 	color: #fff;
   font-size: 16px;
+  font-weight: 600;
 }
 input[type="submit"].login:hover,
 a.login:hover{background-color: rgba($primary-color, 0.85);  color:#fff; cursor:pointer;}
@@ -124,10 +126,14 @@ a.login:focus{outline: none;}
       min-width: 32%;
       flex-grow: 1;
       margin-right: 2%;
+      i {
+        margin-right: 3px;
+      }
       .login {
         font-size: 12px;
         text-align: center;
         line-height: 46px; 
+        font-weight: 600;
       }
       &:last-child {
         margin-right: 0;
@@ -155,6 +161,15 @@ input[type="submit"].login{
   }
   &.cc {
     background-color: #417EB7;
+    .logo-cc {
+      font-family: 'PortalCidadao';
+      font-size: 30px;
+      line-height: 25px;
+      vertical-align: middle;
+      &:before {
+        content: "\e605";
+      }
+    }
   }
 } 
 
@@ -221,7 +236,7 @@ div.hidden-data {
     text-align: center;
   }
   .container-mark {
-    margin: 15px;
+    margin: 15px 22px 15px 15px;
     width: 280px;
     margin-top: 40px;
     min-height: 100%;
@@ -240,6 +255,14 @@ div.hidden-data {
   }
 
   .structure {
+    .omnis-platform {
+      .omnis-logo {
+        width: 170px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    }
     .fenix-model {
       .fenix-logo {
         width: 80px;

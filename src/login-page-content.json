@@ -15,9 +15,9 @@
 		"authenticationUrl": "/fenix/api/bennu-core/profile/extension/loginExtension",
 		"facebookUrl": "",
 		"googleplusUrl": "",
-		"citizencardUrl": "",
+		"citizencardUrl": "https://www.facebook.com/SonarFestivalOfficialPage/",
 		"helpUrl": "#",
-		"contextPath": "static/qubLoginPage/",
+		"contextPath": "",
 		"entrypointUrl": ""
 	},
 	"theme": {
