@@ -223,18 +223,18 @@ div.hidden-data {
   position: fixed;
   z-index: 2000;
   right: 0;
-  background-color: #FFFFFF;
   height: 100%;
-  width: 0;
-  transition: width 800ms ease;
-  overflow-y: auto;
+  width: 400px;
+  right: -360px;
+  transition: right 800ms ease;
   overflow-x: hidden;
   .btn {
     position: fixed;
+    margin-left: 1px;
     background-color: #FFFFFF;
     width: 40px;
     height: 40px;
-    margin-left: -40px;
+    line-height: 40px;
     color: #f4f4f4;
     font-size: 30px;
     text-align: center;
@@ -244,9 +244,13 @@ div.hidden-data {
     }
   }
   .container-mark {
-    margin: 15px;
-    width: 280px;
-    margin-top: 40px;
+    padding: 40px 40px 15px;
+    width: 360px;
+    height: 100%;
+    margin-left: 40px;
+    background-color: #FFFFFF;
+    overflow-y: auto;
+    box-sizing: border-box;
     h1 {
       font-size: 20px;
       color: #000000;
@@ -307,5 +311,5 @@ div.hidden-data {
 }
 
 .mark-show {
-  width: 317px;
+  right: 0;
 }
