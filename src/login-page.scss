@@ -260,21 +260,40 @@ div.hidden-data {
       line-height: 23px;
     }
   }  
+
+  .separated {
+    border-top: 1px #ccc dashed;
+    margin-top: 40px;
+    margin-bottom: -6px;
+  }
   .structure {
+    ul {
+      list-style: none;
+    padding-left: 0px;
+    font-size: 14px;
+    line-height: 23px;
+    text-decoration: underline;
+    li {
+      a {
+        color: #393939;
+        &:hover {
+          color: #8a8a8a;
+        }
+        }
+      }
+    }
     .omnis-platform {
+      margin-top: 40px;
       .omnis-logo {
         width: 170px;
         height: auto;
-        display: block;
-        margin: 0 auto;
       }
     }
     .fenix-model {
+      margin-top: 40px;
       .fenix-logo {
         width: 80px;
         height: auto;
-        display: block;
-        margin: 0 auto;
       }
     }
   }
@@ -283,6 +302,7 @@ div.hidden-data {
     font-size: 12px;
     text-align: center;
     bottom: 5px;
+    margin-top: 40px;
   }
 }
 
