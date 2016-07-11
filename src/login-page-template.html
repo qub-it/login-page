@@ -18,11 +18,13 @@
 
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js" ></script>
     <script type="text/javascript" src="{{login.contextPath}}login-page.js" ></script>
+    <script type="text/javascript" src="{{login.contextPath}}i18n.js" ></script>
   </head>
 
 <body>
   <div id="formWrapper">
     <form id="form">
+      <input type="hidden" id="path" value="{{login.contextPath}}">
       <input type="hidden" id="authenticator" value="{{login.authenticationUrl}}">
       <input type="hidden" id="callback" name="callback" value="{{login.entrypointUrl}}">
       <div class="logo">
@@ -32,22 +34,22 @@
       </div>
       <div class="alert-login">
         <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
-        <p>A autenticar...</p>
+        <p data-i18n="login.authenticating"></p>
       </div>
       <div id="form-container">
         <div class="form-item">
-          <p class="formLabel">Username</p>
+          <p class="formLabel" data-i18n="login.username"></p>
           <input type="text" name="username" id="username" class="form-style" autocapitalize="off" autocomplete="off" autofocus/>
         </div>
         <div class="form-item">
-          <p class="formLabel">Password</p>
+          <p class="formLabel" data-i18n="login.password"></p>
           <input type="password" name="password" id="password" class="form-style" />
           {{#login.passwordRecoveryUrl}}
-            <p class="rup-pass"><a href="{{login.passwordRecoveryUrl}}" ><small>Forgot Password ?</small></a></p>
+            <p class="rup-pass"><a href="{{login.passwordRecoveryUrl}}" ><small data-i18n="login.passwordRecovery"></small></a></p>
           {{/login.passwordRecoveryUrl}}
           <!-- <div class="pw-view"><i class="fa fa-eye"></i></div> -->
         </div>
-        <div class="alert">Verifique se introduziu correctamente os seus dados.</div>
+        <div class="alert" data-i18n="login.authenticationError"></div>
         <div class="form-item">
           <input type="submit" id="auth-button" class="login pull-right" value="Log In">    
         </div>      
@@ -69,9 +71,9 @@
       <div class="clear-fix"></div>
       <div class="footer">
         {{#login.helpUrl}}
-        <p class="help"><a href="{{login.helpUrl}}" ><small><i class="fa fa-life-ring"></i> help</small></a></p>
+        <p class="help"><a href="{{login.helpUrl}}" ><small><i class="fa fa-life-ring"></i></small> <small data-i18n="login.help">></small></a></p>
         {{/login.helpUrl}} 
-        <p class="language"><a href="#" ><small><i class="fa fa-globe"></i> language(English)</small></a></p>		 
+        <p class="language"><a href="#" id="locale-toggler" ><small><i class="fa fa-globe"></i></small> <small data-i18n="login.langToggler"></small></a></p>		 
       </div>  
     </form>
   </div>

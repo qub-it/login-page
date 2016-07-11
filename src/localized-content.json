@@ -1,0 +1,32 @@
+{
+	"login": {
+		"username": {
+			"en": "Username",
+			"pt": "Nome Utilizador"
+		},
+		"password": {
+			"en": "Password",
+			"pt": "Senha"
+		},
+		"passwordRecovery": {
+			"en": "Forgot your passoword?",
+			"pt": "Esqueceu-se da sua senha?"
+		},
+		"authenticating": {
+			"en": "Authenticating...",
+			"pt": "A autenticar..."
+		},
+		"authenticationError": {
+			"en": "Check if you have correctly submitted your login data.",
+			"pt": "Verifique se introduziu correctamente os seus dados."
+		},
+		"help": {
+			"en": "help",
+			"pt": "ajuda"
+		},
+		"langToggler": {
+			"en": "Português",
+			"pt": "English"
+		}
+	}
+}

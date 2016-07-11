@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$('body').css('background-image','url(' + getRandomBgUrl() + ')')
 
 	var formInputs = $('#username, #password');
@@ -46,6 +47,20 @@ $(document).ready(function(){
   			$('#form-container').show();
   			$('.alert-login').hide();
   		});
+  		return false;
+  	});
+
+  	var lang = 'pt';
+	var i18n = new I18n(lang, $('#path').val());
+	i18n.localize();
+
+  	$('#locale-toggler').on('click', function () {
+  		if (lang === 'pt') {
+  			lang = i18n.lang('en');
+  		} else {
+  			lang = i18n.lang('pt');
+  		}
+
   		return false;
   	});
 
